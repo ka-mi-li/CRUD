@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Questrial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../imagens/fotofundo2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Wrapper que engloba imagem e formulário lado a lado */
+.foto {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 40px;
+  
+}
+
+/* Estilo do quadro com a imagem e nome */
+.fotoperfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: solid 3px #d9d9d9;
+}
+
+/* Imagem do avatar */
+.fotoperfil img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* Nome abaixo da imagem */
+#nomeDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Container do formulário */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 20px 40px 20px 40px;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #d9d9d9;
+}
+
+/* Labels */
+label {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+  display: block;
+}
+
+/* Inputs e select */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #c3c9c7;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: white;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 2px;
+  transition: 0.2s ease;
+  font-family: 'Questrial', sans-serif;
+  padding: 10px;
+}
+
+/* Foco nos inputs */
+input:focus,
+select:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+/* Container dos botões */
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Estilo dos botões */
+button#voltar,
+button#salvar,
+button#editar {
+  background-color: #f8d3e0;
+  color: #333;
+  font-size: 14px;
+  border: 2px solid #d9d9d9;
+  font-weight: 600;
+  font-family: 'Questrial', sans-serif;
+  width: 150px;
+  transition: all linear 160ms;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+button#voltar:hover,
+button#salvar:hover,
+button#editar:hover {
+  transform: scale(1.05);
+}

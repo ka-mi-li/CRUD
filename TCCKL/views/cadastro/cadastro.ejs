@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="/css/ecad.css" />
+  <link rel="stylesheet" href="/css/logo.css" />
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Cadastro de usuário</h2>
+    <form id="cadastroForm" method="POST" action="/cadastro/resp">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required />
+
+      <label for="data_nasc">Data de nascimento</label>
+      <input type="date" id="data_nasc" name="data_nasc" placeholder="DD/MM/AAAA" required />
+
+      <label for="genero">Gênero</label>
+      <select id="genero" name="genero" required>
+        <option value="1">Feminino</option>
+        <option value="2">Masculino</option>
+        <option value="3">Não-binário</option>
+        <option value="4">Outros</option>
+      </select>
+
+      <label for="senha">Senha</label>
+      <div class="senha-container">
+        <input type="password" id="senha" name="senha" required />
+        <span class="olho" onclick="togglePassword('senha')">&#128065;</span>
+      </div>
+
+      <label for="confirmarSenha">Confirmar senha</label>
+      <div class="senha-container">
+        <input type="password" id="confirmarSenha" name="confirmarSenha" required />
+        <span class="olho" onclick="togglePassword('confirmarSenha')">&#128065;</span>
+      </div>
+
+      <!-- Alerta personalizado (sem criar novo botão) -->
+      <div id="custom-alert" class="alert hidden">
+        <div class="alert-content">
+          <span id="alert-message">Mensagem</span>
+          <button id="alert-ok-button">OK</button>
+        </div>
+      </div>
+
+      <a href="/">Voltar</a>
+      <button id="concluir" type="submit">Concluir</button>
+    </form>
+  </div>
+  <div id="logo"></div>
+  <script src="/js/scriptcad.js"></script>
+  <script src="/js/logo.js"></script>
+</body>
+
+</html>
